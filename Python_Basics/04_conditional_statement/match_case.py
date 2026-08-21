@@ -7,5 +7,5 @@ match color:
         print("Look")
     case "Red":
         print("Stop")
-    case _:
+    case _: #default value
         print("Wrong color!")
