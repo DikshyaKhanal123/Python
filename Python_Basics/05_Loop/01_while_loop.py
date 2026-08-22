@@ -5,7 +5,7 @@ while True:
 
 '''
 
-count = 1
+count = 1 #iterator
 while(count<=5):
     print("hello world")
     count += 1
