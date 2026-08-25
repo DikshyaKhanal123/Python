@@ -6,4 +6,4 @@ while i <= num:
     factorial = factorial * i
     i += 1
 
-print("Factorial =", factorial)
+print("Factorial :", factorial)
