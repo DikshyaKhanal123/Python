@@ -1,4 +1,4 @@
-num = 5
+num = int(input("enter number"))
 i = 1
 factorial = 1
 
