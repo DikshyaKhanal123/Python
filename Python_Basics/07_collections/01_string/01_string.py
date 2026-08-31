@@ -1,0 +1,2 @@
+word = "python"
+print(word)
