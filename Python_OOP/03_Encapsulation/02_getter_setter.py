@@ -1,6 +1,6 @@
 class BankAccount:
     def __init__(self, name, balance):
-        self.__name = name
+        self.__name = name #private
         self.__balance = balance
 
     def get_balance(self): #getter 
