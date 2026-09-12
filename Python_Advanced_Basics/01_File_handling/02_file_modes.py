@@ -11,3 +11,12 @@ f =open("sample.txt" , "w")
 f.write("this is a sample file")
 f.close()
 
+f = open("student.txt" , "r+")
+data = f.read()
+print(data)
+f.close()
+
+f = open("student.txt" , "w+")
+data = f.read()
+print(data)
+f.close()
