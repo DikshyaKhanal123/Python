@@ -19,7 +19,7 @@ def fahrenheit_to_celsius():
     print(f"Temperature: {celsius}°C")
 
 
-print("===== TEMPERATURE CONVERTER =====")
+print("TEMPERATURE CONVERTER")
 print("1. Celsius to Fahrenheit")
 print("2. Fahrenheit to Celsius")
 
@@ -35,7 +35,7 @@ else:
     print("Invalid choice!")rature: {celsius}°C")
 
 
-print("===== TEMPERATURE CONVERTER =====")
+print("TEMPERATURE CONVERTER")
 print("1. Celsius to Fahrenheit")
 print("2. Fahrenheit to Celsius")
 
