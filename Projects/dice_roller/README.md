@@ -15,7 +15,7 @@ This project was created to practice basic Python concepts and the `random` modu
 
 ## 🛠️ Technologies Used
 
-* **Python**
+ **Python**
 
 ## 📚 Concepts Used
 
