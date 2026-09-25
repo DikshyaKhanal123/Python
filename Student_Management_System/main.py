@@ -1,5 +1,11 @@
 print("*** Student Management System ***")
 
+students = []
+student = {
+    "name" : name,
+    "roll" : roll,
+    "age" : age
+}
 while True: 
     print("choose option:")
     print("1. Add Student")
@@ -11,7 +17,17 @@ while True:
     choice = input("Enter your choice:")
 
     if choice == "1":
-        print("Add Student selected")
+       name = input("Enter Student name:") 
+       roll = input("Enter roll number:")
+       age = input("Enter age:")
+
+       student = {
+    "name" : name,
+    "roll" : roll,
+    "age" : age
+}
+       students.append(student)
+       print("student added successfully!")
 
     elif choice == "2":
         print("View Students selected")
