@@ -30,7 +30,12 @@ while True:
        print("student added successfully!")
 
     elif choice == "2":
-        print("View Students selected")
+        elif choice == "2":
+    if len(students) == 0:
+        print("No students found.")
+    else:
+        for student in students:
+            print(student)
 
     elif choice == "3":
         print("Search Student selected")
