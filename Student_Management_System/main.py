@@ -38,7 +38,18 @@ while True:
             print(student)
 
     elif choice == "3":
-        print("Search Student selected")
+    
+        roll = input("Enter roll number to search: ")
+
+        for student in students:
+            if student["roll"] == roll:
+                print("Student found!")
+                print(f"Name: {student['name']}")
+                print(f"Roll: {student['roll']}")
+                print(f"Age: {student['age']}")
+                break
+        else:
+            print("Student not found!")
 
     elif choice == "4":
         print("Delete Student selected")
