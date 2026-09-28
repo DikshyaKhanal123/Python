@@ -178,18 +178,6 @@ CRUD
 Data Persistence
 ```
 
-## 🚀 Future Improvements
-
-Possible future improvements include:
-
-* Separate the project into Python modules
-* Add student marks and grades
-* Add duplicate roll-number validation
-* Improve the user interface
-* Add search by name
-* Add sorting functionality
-* Add logging
-* Use a database instead of JSON
 
 ## 👩‍💻 Author
 
