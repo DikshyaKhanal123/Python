@@ -5,7 +5,16 @@ students = []
 def  add_student():
     name = input("Enter Student name:") 
     roll = input("Enter roll number:")
-    age = input("Enter age:")
+    while True:
+        try:
+            age = int(input("Enter age:"))
+            if age <= 0:
+                raise ValueError("Age must be greater than 0")
+            break
+        except ValueError as e:
+            print(e)
+        
+
     student = {
         "name" : name,
         "roll" : roll,
@@ -32,8 +41,9 @@ def search_student():
             print(f"Roll: {student['roll']}")
             print(f"Age: {student['age']}")
             break
-        else:
-            print("Student not found!")
+    else:
+        print("Student not found!")
+
 def delete_student():
     roll = input("Enter roll number to delete: ")
     
@@ -42,8 +52,8 @@ def delete_student():
             students.remove(student)
             print("Student deleted successfully!")
             break
-        else:
-            print("Student not found!")
+    else:
+        print("Student not found!")
     
 while True: 
     print("choose option:")
