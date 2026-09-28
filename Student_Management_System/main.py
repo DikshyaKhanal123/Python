@@ -1,5 +1,6 @@
 print("*** Student Management System ***")
 
+import json
 students = []
 
 def  add_student():
@@ -56,24 +57,16 @@ def delete_student():
         print("Student not found!")
 
 def save_students():
-    with open("students.txt", "w") as file:
-        for student in students:
-            file.write(f"{student['name']},{student['roll']},{student['age']}\n")
+    with open("students.json", "w") as file:
+       json.dump(students, file, indent=4)
+
     print("students saved successfully")
 
 def load_students():
     try:
-        with open("students.txt", "r") as file:
-            for line in file:
-                name, roll, age = line.strip().split(",")
-
-                student = {
-                    "name": name,
-                    "roll": roll,
-                    "age": int(age)
-                }
-
-                students.append(student)
+        with open("students.json", "r") as file:
+            data = json.load(file)
+            students.extend(data)
 
     except FileNotFoundError:
         print("No saved student data found.")
