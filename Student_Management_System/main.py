@@ -2,6 +2,49 @@ print("*** Student Management System ***")
 
 students = []
 
+def  add_student():
+    name = input("Enter Student name:") 
+    roll = input("Enter roll number:")
+    age = input("Enter age:")
+    student = {
+        "name" : name,
+        "roll" : roll,
+        "age" : age
+    }
+    
+    students.append(student)
+    print("student added successfully!")
+
+def view_students():
+    if len(students) == 0:
+        print("No students found.")
+    else:
+        for student in students:
+            print(student)
+
+def search_student():
+    roll = input("Enter roll number to search: ")
+    
+    for student in students:
+        if student["roll"] == roll:
+            print("Student found!")
+            print(f"Name: {student['name']}")
+            print(f"Roll: {student['roll']}")
+            print(f"Age: {student['age']}")
+            break
+        else:
+            print("Student not found!")
+def delete_student():
+    roll = input("Enter roll number to delete: ")
+    
+    for student in students:
+        if student["roll"] == roll:
+            students.remove(student)
+            print("Student deleted successfully!")
+            break
+        else:
+            print("Student not found!")
+    
 while True: 
     print("choose option:")
     print("1. Add Student")
@@ -13,51 +56,16 @@ while True:
     choice = input("Enter your choice:")
 
     if choice == "1":
-       name = input("Enter Student name:") 
-       roll = input("Enter roll number:")
-       age = input("Enter age:")
-       student = {
-    "name" : name,
-    "roll" : roll,
-    "age" : age
-}
-
-       students.append(student)
-       print("student added successfully!")
+        add_student()
 
     elif choice == "2":
-
-        if len(students) == 0:
-            print("No students found.")
-        else:
-            for student in students:
-                print(student)
+        view_students()
 
     elif choice == "3":
+        search_student()
     
-        roll = input("Enter roll number to search: ")
-
-        for student in students:
-            if student["roll"] == roll:
-                print("Student found!")
-                print(f"Name: {student['name']}")
-                print(f"Roll: {student['roll']}")
-                print(f"Age: {student['age']}")
-                break
-        else:
-            print("Student not found!")
-
     elif choice == "4":
-
-        roll = input("Enter roll number to delete: ")
-
-        for student in students:
-            if student["roll"] == roll:
-                students.remove(student)
-                print("Student deleted successfully!")
-                break
-        else:
-            print("Student not found!")
+        delete_student()
 
     elif choice == "5":
         print("Goodbye!")
