@@ -54,6 +54,32 @@ def delete_student():
             break
     else:
         print("Student not found!")
+
+def save_students():
+    with open("students.txt", "w") as file:
+        for student in students:
+            file.write(f"{student['name']},{student['roll']},{student['age']}\n")
+    print("students saved successfully")
+
+def load_students():
+    try:
+        with open("students.txt", "r") as file:
+            for line in file:
+                name, roll, age = line.strip().split(",")
+
+                student = {
+                    "name": name,
+                    "roll": roll,
+                    "age": int(age)
+                }
+
+                students.append(student)
+
+    except FileNotFoundError:
+        print("No saved student data found.")
+
+
+load_students()
     
 while True: 
     print("choose option:")
@@ -67,6 +93,7 @@ while True:
 
     if choice == "1":
         add_student()
+        save_students()
 
     elif choice == "2":
         view_students()
@@ -76,6 +103,7 @@ while True:
     
     elif choice == "4":
         delete_student()
+        save_students()
 
     elif choice == "5":
         print("Goodbye!")
@@ -83,3 +111,6 @@ while True:
 
     else:
         print("Invalid choice!")
+
+
+
