@@ -1,12 +1,17 @@
 [
     {
-        "name": "dikshya",
+        "name": "karishma",
         "roll": "1",
-        "age": 20
+        "age": 80
     },
     {
-        "name": "karishma",
+        "name": "ramit",
         "roll": "2",
-        "age": 30
+        "age": 29
+    },
+    {
+        "name": "dikshya",
+        "roll": "1",
+        "age": 23
     }
 ]
